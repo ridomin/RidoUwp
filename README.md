@@ -1,0 +1,2 @@
+# RidoUwp
+UWP versioning utilities
