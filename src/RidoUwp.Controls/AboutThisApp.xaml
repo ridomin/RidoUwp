@@ -1,0 +1,43 @@
+﻿<UserControl
+    x:Class="RidoUwp.Controls.AboutThisApp"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="using:RidoUwp.Controls"
+    mc:Ignorable="d"
+    DataContext="{Binding RelativeSource={RelativeSource Self}}"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Grid Padding="5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Margin="2" 
+                   Text="{x:Bind vm.Package.DisplayName}"  
+                   FontSize="32"/>
+        <Image Grid.Row="1" Grid.Column="0" VerticalAlignment="Top"
+               Source="{x:Bind vm.AppLogo}"/>
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical">
+            <TextBlock Text="{x:Bind vm.VersionString}" FontSize="18" />
+            <TextBlock Text="{x:Bind vm.Package.PublisherDisplayName}" FontSize="12" />
+            <TextBlock Text="{x:Bind vm.Package.Id.Architecture}" FontSize="12" />
+            <TextBlock Text="{x:Bind vm.Package.InstalledLocation.Path}" FontSize="12"/>
+            <Border BorderBrush="Black" Padding="5" Background="{ThemeResource AppBarBorderThemeBrush}">
+                <TextBlock Text="{x:Bind vm.Metadata}" />
+            </Border>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.RowSpan="2" Orientation="Vertical">
+            <TextBlock Text="{x:Bind vm.InstalledOn}" FontSize="12" />
+
+        </StackPanel>
+
+    </Grid>
+</UserControl>
