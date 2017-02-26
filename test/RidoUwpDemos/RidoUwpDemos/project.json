@@ -1,7 +1,7 @@
 ﻿{
   "dependencies": {
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
-    "RidoUwp.Controls": "0.0.*"
+    "RidoUwp.Controls": "0.0.31"
   },
   "frameworks": {
     "uap10.0": {}
