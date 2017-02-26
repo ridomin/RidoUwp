@@ -34,9 +34,9 @@
                 <TextBlock Text="{x:Bind vm.Metadata}" />
             </Border>
         </StackPanel>
-        <StackPanel Grid.Row="2" Grid.RowSpan="2" Orientation="Vertical">
+        <StackPanel Grid.Row="2" Grid.ColumnSpan="2" Orientation="Vertical">
             <TextBlock Text="{x:Bind vm.InstalledOn}" FontSize="12" />
-
+            <TextBlock Text="{x:Bind vm.MyVersion}" FontSize="12" />
         </StackPanel>
 
     </Grid>

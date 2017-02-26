@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
@@ -18,6 +19,8 @@ namespace RidoUwp.Controls
                                             Package.Current.Id.Version.Minor, 
                                             Package.Current.Id.Version.Build, 
                                             Package.Current.Id.Version.Revision);
+        public string MyVersion => this.GetType().AssemblyQualifiedName;
+
         public string Metadata
         {
             get
