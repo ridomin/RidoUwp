@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>RidoUwp.Controls</id>
-    <version>0.0.1.0</version>
+    <version>$version$</version>
     <title>RidoUwp.Controls</title>
     <authors>rido</authors>
     <owners>rido</owners>
