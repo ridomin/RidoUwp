@@ -22,5 +22,6 @@
   <files>
     <file src="bin\$configuration$\*.dll" target="lib\uap10.0" />
     <file src="bin\$configuration$\*.pri" target="lib\uap10.0" />
+    <file src="bin\$configuration$\*.xml" target="lib\uap10.0\RidoUwp.Controls" />
   </files>
 </package>
