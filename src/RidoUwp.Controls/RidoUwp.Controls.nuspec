@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>RidoUwp.Controls</id>
+    <version>0.0.1.0</version>
+    <title>RidoUwp.Controls</title>
+    <authors>rido</authors>
+    <owners>rido</owners>
+    <licenseUrl>https://raw.githubusercontent.com/ridomin/RidoUwp/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/ridomin/RidoUwp</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Utilities for UWP apps versioning</description>
+    <releaseNotes>Rido Demos</releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>uwp devops</tags>
+    <dependencies>
+      <group targetFramework="UAP10.0">
+        <dependency id="Microsoft.NETCore.UniversalWindowsPlatform" version="5.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\$configuration$\*.dll" target="lib\uap10.0" />
+    <file src="bin\$configuration$\*.pri" target="lib\uap10.0" />
+  </files>
+</package>
