@@ -39,6 +39,23 @@ namespace RidoUwp.Controls
             }
         }
 
+        public string StoreInfo => GetStoreInfo();
+
+        public static string GetStoreInfo()
+        {
+            var ctx = Windows.Services.Store.StoreContext.GetDefault();
+            if (ctx==null)
+            {
+                return "Context is null";
+            }
+            if (ctx.User == null)
+            {
+                return "Context.User is null";
+            }
+            return ctx.User.AuthenticationStatus.ToString();
+
+        }
+
         public string InstalledOn
         {
             get

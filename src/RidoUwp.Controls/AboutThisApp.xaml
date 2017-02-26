@@ -33,6 +33,7 @@
             <Border BorderBrush="Black" Padding="5" Background="{ThemeResource AppBarBorderThemeBrush}">
                 <TextBlock Text="{x:Bind vm.Metadata}" />
             </Border>
+            <TextBlock Text="{x:Bind vm.StoreInfo}" />
         </StackPanel>
         <StackPanel Grid.Row="2" Grid.ColumnSpan="2" Orientation="Vertical">
             <TextBlock Text="{x:Bind vm.InstalledOn}" FontSize="12" />
