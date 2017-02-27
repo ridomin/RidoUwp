@@ -171,6 +171,12 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\RidoUwp.Controls\RidoUwp.Controls.csproj">
+      <Project>{47d98da6-ecf7-49da-8af5-d6bfa1c19c4f}</Project>
+      <Name>RidoUwp.Controls</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
