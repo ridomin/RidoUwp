@@ -1,5 +1,4 @@
-﻿using Microsoft.HockeyApp;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -31,7 +30,7 @@ namespace RidoUwpDemos
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
-            HockeyClient.Current.Configure("7169d8b6f3ad44bfabbe2872d29bcf15");
+            
         }
 
         /// <summary>
