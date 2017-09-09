@@ -24,7 +24,7 @@
                    Text="{x:Bind vm.Package.DisplayName}"  
                    FontSize="32"/>
         <Image Grid.Row="1" Grid.Column="0" VerticalAlignment="Top"
-               Source="{x:Bind vm.AppLogo}"/>
+               Source="{x:Bind vm.AppLogo}" Width="44" Height="44" />
         <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical">
             <TextBlock Text="{x:Bind vm.VersionString}" FontSize="18" />
             <TextBlock Text="{x:Bind vm.Package.PublisherDisplayName}" FontSize="12" />
