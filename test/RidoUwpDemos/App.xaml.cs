@@ -30,7 +30,6 @@ namespace RidoUwpDemos
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
-            
         }
 
         /// <summary>
