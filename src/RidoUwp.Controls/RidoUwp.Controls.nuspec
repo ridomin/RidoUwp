@@ -4,7 +4,7 @@
     <id>RidoUwp.Controls</id>
     <version>$version$</version>
     <title>Rido Controls</title>
-    <authors>rido</authors>
+    <authors>rido, andFriends</authors>
     <owners>microsoft</owners>
     <licenseUrl>https://raw.githubusercontent.com/ridomin/RidoUwp/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/ridomin/RidoUwp</projectUrl>
