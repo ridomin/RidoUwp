@@ -5,6 +5,11 @@ VisualStudioVersion = 15.0.26831.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RidoUwpDemos", "RidoUwpDemos\RidoUwpDemos.csproj", "{2AC6C807-1F48-47CF-A563-15E192AB0A74}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{211EC266-1672-419E-B49D-96AC8AC63AB4}"
+	ProjectSection(SolutionItems) = preProject
+		NuGet.config = NuGet.config
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
