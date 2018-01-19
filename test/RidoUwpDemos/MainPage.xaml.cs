@@ -1,4 +1,7 @@
-﻿using System;
+﻿//using Microsoft.Azure.Mobile;
+//using Microsoft.Azure.Mobile.Analytics;
+//using Microsoft.Azure.Mobile.Crashes;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +28,13 @@ namespace RidoUwpDemos
         public MainPage()
         {
             this.InitializeComponent();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            //MobileCenter.Configure("266fe426-e628-45f4-ae43-24916d9109b5");//, typeof(Analytics), typeof(Crashes));
+            //MobileCenter.Start(typeof(Analytics), typeof(Crashes));
+            //Analytics.TrackEvent("Navigated to Main");
         }
     }
 }
