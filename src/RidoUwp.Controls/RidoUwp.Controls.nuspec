@@ -23,6 +23,6 @@
     <file src="bin\release\*.dll" target="lib\uap10.0.14393" />
     <file src="bin\release\*.pri" target="lib\uap10.0.14393" />
     <file src="bin\release\*.xml" target="lib\uap10.0.14393\RidoUwp.Controls" />
-    <!--file src="bin\release\*.xbf" target="lib\uap10.0.14393\RidoUwp.Controls" /-->
+    <file src="bin\release\*.xbf" target="lib\uap10.0.14393\RidoUwp.Controls" />
   </files>
 </package>
