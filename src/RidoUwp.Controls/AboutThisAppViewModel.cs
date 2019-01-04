@@ -13,7 +13,6 @@ namespace RidoUwp.Controls
 {
     public class AboutThisAppViewModel
     {
-     
         public Package Package => Package.Current;
         public BitmapImage AppLogo => new BitmapImage(Package.Current.Logo);
         public string VersionString => string.Format("{0}.{1}.{2}.{3}", 
@@ -21,7 +20,9 @@ namespace RidoUwp.Controls
                                             Package.Current.Id.Version.Minor, 
                                             Package.Current.Id.Version.Build, 
                                             Package.Current.Id.Version.Revision);
-        public string MyVersion => ThisAssembly.AssemblyVersion + " " + ThisAssembly.AssemblyFileVersion + " " + ThisAssembly.AssemblyInformationalVersion;
+        public string MyVersion => ThisAssembly.AssemblyVersion + " " + 
+                                   ThisAssembly.AssemblyFileVersion + " " + 
+                                   ThisAssembly.AssemblyInformationalVersion;
 
         public string Metadata
         {
