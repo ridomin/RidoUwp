@@ -21,7 +21,7 @@ namespace RidoUwp.Controls
                                             Package.Current.Id.Version.Minor, 
                                             Package.Current.Id.Version.Build, 
                                             Package.Current.Id.Version.Revision);
-        public string MyVersion => this.GetType().AssemblyQualifiedName;
+        public string MyVersion => ThisAssembly.AssemblyInformationalVersion;
 
         public string Metadata
         {
