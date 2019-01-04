@@ -19,11 +19,28 @@ namespace RidoUwp.Controls
 {
     public sealed partial class AboutThisApp : UserControl
     {
+        bool metadataVisible = false;
         public AboutThisAppViewModel vm => new AboutThisAppViewModel();
 
         public AboutThisApp()
         {
             this.InitializeComponent();
+        }
+
+        private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
+        {
+            HyperlinkButton button = sender as HyperlinkButton;
+            if (metadataVisible)
+            {
+                metadataPanel.Visibility = Visibility.Collapsed;
+                button.Content = "Show Metadata";
+            }
+            else
+            {
+                metadataPanel.Visibility = Visibility.Visible;
+                button.Content = "Hide Metadata";
+            }
+            metadataVisible = !metadataVisible;
         }
     }
 }

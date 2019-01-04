@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using System.Xml.Linq;
 using Windows.ApplicationModel;
 using Windows.UI.Xaml.Media.Imaging;
@@ -12,6 +13,7 @@ namespace RidoUwp.Controls
 {
     public class AboutThisAppViewModel
     {
+     
         public Package Package => Package.Current;
         public BitmapImage AppLogo => new BitmapImage(Package.Current.Logo);
         public string VersionString => string.Format("{0}.{1}.{2}.{3}", 
@@ -65,15 +67,9 @@ namespace RidoUwp.Controls
             return res;
         }
 
-        public string InstalledOn
-        {
-            get
-            {
-                return SafeInstalledOn();
-            }
-        }
-
-        private static string SafeInstalledOn()
+        public string InstalledOn => SafeInstalledOn();
+        
+        private string SafeInstalledOn()
         {
             DateTimeOffset installed;
             try

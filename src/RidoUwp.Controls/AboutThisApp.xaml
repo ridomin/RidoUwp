@@ -9,36 +9,53 @@
     DataContext="{Binding RelativeSource={RelativeSource Self}}"
     d:DesignHeight="300"
     d:DesignWidth="400">
-
+    
     <Grid Padding="5">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="100"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Margin="2" 
-                   Text="{x:Bind vm.Package.DisplayName}"  
-                   FontSize="32"/>
+        <TextBlock Grid.Row="0" Grid.Column="1" Margin="5" 
+                   Text="{x:Bind vm.Package.DisplayName}" FontSize="32"/>
         <Image Grid.Row="1" Grid.Column="0" VerticalAlignment="Top"
                Source="{x:Bind vm.AppLogo}" Width="44" Height="44" />
-        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical">
-            <TextBlock Text="{x:Bind vm.VersionString}" FontSize="18" />
-            <TextBlock Text="{x:Bind vm.Package.PublisherDisplayName}" FontSize="12" />
-            <TextBlock Text="{x:Bind vm.Package.Id.Architecture}" FontSize="12" />
-            <TextBlock Text="{x:Bind vm.Package.InstalledLocation.Path}" FontSize="12"/>
-            <Border BorderBrush="Black" Padding="5" Background="{ThemeResource AppBarBorderThemeBrush}">
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical" Margin="5">
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="{x:Bind vm.VersionString}" FontSize="18" />
+                <TextBlock Text=" (" FontSize="18" />
+                <TextBlock Text="{x:Bind vm.Package.Id.Architecture}" FontSize="18" />
+                <TextBlock Text=") " FontSize="18" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="by: " />
+                <TextBlock Text="{x:Bind vm.Package.PublisherDisplayName}"  />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Path: " />
+                <TextBlock Text="{x:Bind vm.Package.InstalledLocation.Path}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="StoreInfo: " />
+                <TextBlock Text="{x:Bind vm.StoreInfo}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Installed On: " />
+                <TextBlock Text="{x:Bind vm.InstalledOn}"  />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Assembly Version: " />
+                <TextBlock Text="{x:Bind vm.MyVersion}"  />
+            </StackPanel>
+            <HyperlinkButton Content="Show Metadata" Click="HyperlinkButton_Click"/>
+            <Border x:Name="metadataPanel" BorderBrush="Black" Padding="5" Background="{ThemeResource AppBarBorderThemeBrush}" Visibility="Collapsed">
                 <TextBlock Text="{x:Bind vm.Metadata}" />
             </Border>
-            <TextBlock Text="{x:Bind vm.StoreInfo}" />
         </StackPanel>
-        <StackPanel Grid.Row="2" Grid.ColumnSpan="2" Orientation="Vertical">
-            <TextBlock Text="{x:Bind vm.InstalledOn}" FontSize="12" />
-            <TextBlock Text="{x:Bind vm.MyVersion}" FontSize="12" />
-        </StackPanel>
+        
 
     </Grid>
 </UserControl>
