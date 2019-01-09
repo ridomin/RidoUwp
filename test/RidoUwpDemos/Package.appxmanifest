@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="18656RidoMin.RidoUWPDemos" Publisher="CN=FD784322-3D44-4DA4-9F73-0E23D5DF0893" Version="1.1.0.0" />
+  <Identity Name="18656RidoMin.RidoUWPDemos" Publisher="CN=FD784322-3D44-4DA4-9F73-0E23D5DF0893" Version="1.1.4.0" />
   <mp:PhoneIdentity PhoneProductId="698eb22a-adcc-43e4-8e93-862d8b0781cf" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>RidoUWPDemos</DisplayName>
