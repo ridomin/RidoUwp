@@ -5,11 +5,6 @@ VisualStudioVersion = 16.0.28508.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RidoUwp.Controls.TestNuget", "RidoUwp.Controls.TestNuget\RidoUwp.Controls.TestNuget.csproj", "{FB24842D-B8DC-430E-A5FA-B8B7719FB4C8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6164EA5A-A13C-4AC2-BD9A-2E222CDCD621}"
-	ProjectSection(SolutionItems) = preProject
-		NuGet.config = NuGet.config
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -51,6 +46,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {EBFDE184-AD8B-47A2-A106-0D3E917E5A90}
+		SolutionGuid = {B6161616-4556-409E-821A-305CAF8EDF93}
 	EndGlobalSection
 EndGlobal
