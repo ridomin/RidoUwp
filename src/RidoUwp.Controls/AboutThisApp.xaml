@@ -31,25 +31,30 @@
                 <TextBlock Text=") " FontSize="18" />
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5">
-                <TextBlock Text="by: " />
+                <TextBlock Text="by: " Padding="0,0,3,0" />
                 <TextBlock Text="{x:Bind vm.Package.PublisherDisplayName}"  />
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5">
-                <TextBlock Text="Path: " />
+                <TextBlock Text="Path: " Padding="0,0,3,0"/>
                 <TextBlock Text="{x:Bind vm.Package.InstalledLocation.Path}" />
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5">
-                <TextBlock Text="StoreInfo: " />
+                <TextBlock Text="StoreInfo: " Padding="0,0,3,0"/>
                 <TextBlock Text="{x:Bind vm.StoreInfo}" />
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5">
-                <TextBlock Text="Installed On: " />
+                <TextBlock Text="Installed On: " Padding="0,0,3,0"/>
                 <TextBlock Text="{x:Bind vm.InstalledOn}"  />
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5">
-                <TextBlock Text="Assembly Version: " />
+                <TextBlock Text="App Version: " Padding="0,0,3,0" />
+                <TextBlock Text="{x:Bind vm.AppVersion}"  />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="ThisControl Version: " Padding="0,0,3,0" />
                 <TextBlock Text="{x:Bind vm.MyVersion}"  />
             </StackPanel>
+            
             <HyperlinkButton Content="Show Metadata" Click="HyperlinkButton_Click"/>
             <Border x:Name="metadataPanel" BorderBrush="Black" Padding="5" Background="{ThemeResource AppBarBorderThemeBrush}" Visibility="Collapsed">
                 <TextBlock Text="{x:Bind vm.Metadata}" />

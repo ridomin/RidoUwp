@@ -15,14 +15,24 @@ namespace RidoUwp.Controls
     {
         public Package Package => Package.Current;
         public BitmapImage AppLogo => new BitmapImage(Package.Current.Logo);
-        public string VersionString => string.Format("{0}.{1}.{2}.{3}", 
-                                            Package.Current.Id.Version.Major, 
-                                            Package.Current.Id.Version.Minor, 
-                                            Package.Current.Id.Version.Build, 
+        public string VersionString => string.Format("{0}.{1}.{2}.{3}",
+                                            Package.Current.Id.Version.Major,
+                                            Package.Current.Id.Version.Minor,
+                                            Package.Current.Id.Version.Build,
                                             Package.Current.Id.Version.Revision);
-        public string MyVersion => ThisAssembly.AssemblyVersion + " " + 
-                                   ThisAssembly.AssemblyFileVersion + " " + 
-                                   ThisAssembly.AssemblyInformationalVersion;
+        public string MyVersion => $"{ThisAssembly.AssemblyName} " +
+                                   $"{ThisAssembly.AssemblyVersion} " +
+                                   $"{ThisAssembly.AssemblyFileVersion} " +
+                                   $"{ThisAssembly.AssemblyInformationalVersion}";
+
+        public string AppVersion => GetAppVersion();
+
+        private string GetAppVersion()
+        {
+            Assembly a = Assembly.GetEntryAssembly();
+            AssemblyName an = a.GetName();
+            return $"{an.Name} {an.Version.Major}.{an.Version.Minor}.{an.Version.Revision}.{an.Version.Build}";
+        }
 
         public string Metadata
         {
