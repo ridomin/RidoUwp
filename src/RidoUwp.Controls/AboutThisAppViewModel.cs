@@ -11,7 +11,7 @@ using Windows.UI.Xaml.Media.Imaging;
 
 namespace RidoUwp.Controls
 {
-    public class AboutThisAppViewModel
+    public sealed class  AboutThisAppViewModel
     {
         public Package Package => Package.Current;
         public BitmapImage AppLogo => new BitmapImage(Package.Current.Logo);
@@ -20,10 +20,14 @@ namespace RidoUwp.Controls
                                             Package.Current.Id.Version.Minor,
                                             Package.Current.Id.Version.Build,
                                             Package.Current.Id.Version.Revision);
-        public string MyVersion => $"{ThisAssembly.AssemblyName} " +
-                                   $"{ThisAssembly.AssemblyVersion} " +
-                                   $"{ThisAssembly.AssemblyFileVersion} " +
-                                   $"{ThisAssembly.AssemblyInformationalVersion}";
+        public string MyVersion => GetThisControlVersion();
+
+        private string GetThisControlVersion()
+        {
+            Assembly a = Assembly.GetExecutingAssembly();
+            AssemblyName an = a.GetName();
+            return $"{an.Name} {an.Version.Major}.{an.Version.Minor}.{an.Version.Revision}.{an.Version.Build}";
+        }
 
         public string AppVersion => GetAppVersion();
 
