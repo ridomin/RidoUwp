@@ -24,7 +24,6 @@
     <file src="bin\release\*.winmd" target="lib\uap10.0.16299" />
     <file src="bin\release\*.pri" target="lib\uap10.0.16299" />
     <file src="bin\release\RidoUwp.Controls\AboutThisApp.xaml" target="lib\uap10.0.16299\RidoUwp.Controls\AboutThisApp.xaml" />
-    <file src="bin\release\RidoUwp.Controls\AboutThisApp.xbf" target="lib\uap10.0.16299\RidoUwp.Controls\AboutThisApp.xbf" />
     <file src="bin\release\RidoUwp.Controls\RidoUwp.Controls.xr.xml" target="lib\uap10.0.16299\RidoUwp.Controls\RidoUwp.Controls.xr.xml" />
   </files>
 </package>
