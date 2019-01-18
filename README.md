@@ -8,9 +8,7 @@ UWP versioning utilities
 
 ### Appx
 
-![App Build status](https://rido.visualstudio.com/_apis/public/build/definitions/4ecb2a57-d4f5-465b-bc68-95cac40fa3e7/68/badge)
-
-[Test App](http://bit.ly/ridouwpdemos-test)
+[![Build status](https://ridocode.visualstudio.com/RidoBuilder/_apis/build/status/RidoUWPControls_TestNuget)](https://ridocode.visualstudio.com/RidoBuilder/_build/latest?definitionId=20)
 
 
 
