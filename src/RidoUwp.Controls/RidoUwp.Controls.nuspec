@@ -14,16 +14,16 @@
     <copyright>Copyright 2019</copyright>
     <tags>uwp devops</tags>
     <dependencies>
-      <group targetFramework="UAP10.0.16299">
-        <dependency id="Microsoft.NETCore.UniversalWindowsPlatform" version="6.1.5" exclude="Build,Analyzers" />
+      <group targetFramework="UAP10.0">
+        <dependency id="Microsoft.NETCore.UniversalWindowsPlatform" version="5.4.4" exclude="Build,Analyzers" />
       </group>
     </dependencies>
   </metadata>
   <files>
-    <file src="bin\release\*.dll" target="lib\uap10.0.16299" />
-    <file src="bin\release\*.winmd" target="lib\uap10.0.16299" />
-    <file src="bin\release\*.pri" target="lib\uap10.0.16299" />
-    <file src="bin\release\RidoUwp.Controls\AboutThisApp.xaml" target="lib\uap10.0.16299\RidoUwp.Controls\AboutThisApp.xaml" />
-    <file src="bin\release\RidoUwp.Controls\RidoUwp.Controls.xr.xml" target="lib\uap10.0.16299\RidoUwp.Controls\RidoUwp.Controls.xr.xml" />
+    <file src="bin\release\*.dll" target="lib\uap10.0" />
+    <file src="bin\release\*.winmd" target="lib\uap10.0" />
+    <file src="bin\release\*.pri" target="lib\uap10.0" />
+    <file src="bin\release\RidoUwp.Controls\AboutThisApp.xaml" target="lib\uap10.0\RidoUwp.Controls\AboutThisApp.xaml" />
+    <file src="bin\release\RidoUwp.Controls\RidoUwp.Controls.xr.xml" target="lib\uap10.0\RidoUwp.Controls\RidoUwp.Controls.xr.xml" />
   </files>
 </package>
