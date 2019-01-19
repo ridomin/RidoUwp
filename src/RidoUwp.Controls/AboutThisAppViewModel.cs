@@ -24,16 +24,18 @@ namespace RidoUwp.Controls
 
         private string GetThisControlVersion()
         {
-            return this.GetType().AssemblyQualifiedName;
-            //AssemblyName an = a.GetName();
-            //return $"{an.Name} {an.Version.Major}.{an.Version.Minor}.{an.Version.Revision}.{an.Version.Build}";
+            Assembly a = Assembly.GetExecutingAssembly();
+            AssemblyName an = a.GetName();
+            return $"{an.Name} {an.Version.Major}.{an.Version.Minor}.{an.Version.Revision}.{an.Version.Build}";
         }
 
         public string AppVersion => GetAppVersion();
 
         private string GetAppVersion()
         {
-            return "unavailable with this version of the platform";
+            Assembly a = Assembly.GetEntryAssembly();
+            AssemblyName an = a.GetName();
+            return $"{an.Name} {an.Version.Major}.{an.Version.Minor}.{an.Version.Revision}.{an.Version.Build}";
         }
 
         public string Metadata
