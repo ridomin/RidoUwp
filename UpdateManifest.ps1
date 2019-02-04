@@ -8,7 +8,7 @@ function UpdateVersion($path)
 	
 	# Add suffix
 	$manifest.Package.Identity.Name += $suffix
-	$manifest.Package.Properties.DisplayName += " " + $suffix
+	#$manifest.Package.Properties.DisplayName += " " + $suffix
     $manifest.Package.Applications.Application.VisualElements.DisplayName += " " + $suffix	
 	$manifest.Save($path)
 }
