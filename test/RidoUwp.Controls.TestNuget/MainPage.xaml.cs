@@ -25,6 +25,7 @@ namespace RidoUwp.Controls.TestNuget
         public MainPage()
         {
             this.InitializeComponent();
+            Microsoft.HockeyApp.HockeyClient.Current.TrackPageView("MainPage");
         }
     }
 }
